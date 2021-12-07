@@ -136,9 +136,11 @@ body {
 }
 
 @media (max-width: 991px) {
-  .showcase,
-.showcase header {
+  .showcase, .showcase > header {
     padding: 40px;
+  }
+  .showcase video, .showcase > header video {
+    max-height: 100vh;
   }
 
   .text h2 {
