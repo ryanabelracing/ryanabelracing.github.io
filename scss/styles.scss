@@ -168,3 +168,26 @@ body {
     font-size: 2em;
   }
 }
+
+@media (max-width: 400px) {
+  header {
+    flex-direction: column;
+
+    h2 {
+      font-size: 1.25em;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 20%;
+    left: 40px;
+    right: 40px;
+
+    p {
+      text-align: center;
+    }
+  }
+}
