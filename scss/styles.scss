@@ -48,6 +48,29 @@ header {
   }
 }
 
+footer {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  img {
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .footer-text {
+    width: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -65,9 +88,19 @@ body {
   section {
     width: 100%;
 
+    &.full {
+      height: 100vh;
+    }
+
+    &.placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+    }
+
     &.showcase {
       background-color: black;
-      height: 100vh;
       position: relative;
       overflow: hidden;
 
@@ -91,14 +124,33 @@ body {
       }
     }
 
-    &:nth-child(2) {
-      background-color: blue;
-      height: 300px;
+    &.sponsors {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(240, 240, 240);
+      padding: 30px;
+
+      .section-subtitle {
+        margin-bottom: 30px;
+      }
+
+      .sponsor-logos {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+
+        img {
+          max-width: 180px;
+          margin: 20px 60px;
+        }
+      }
     }
 
-    &:nth-child(3) {
-      background-color: green;
-      height: 100px;
+    &:nth-child(2) {
+      height: 600px;
+      
+      background-color: rgb(250, 250, 250);
     }
   }
 }
@@ -177,6 +229,31 @@ body {
 
     h2 {
       font-size: 1.25em;
+    }
+  }
+
+  .container {
+    section {
+      &.sponsors {
+        .sponsor-logos {
+          img {
+            max-width: 100px;
+            margin: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    img {
+      width: 60px;
+      margin-right: 15px;
+    }
+
+    .footer-text {
+      width: 200px;
+      font-size: 0.8em;
     }
   }
 
